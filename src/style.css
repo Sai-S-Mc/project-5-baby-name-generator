@@ -10,6 +10,7 @@ body {
   border-radius: 10px;
   background-image: url("../media/baby-feet.jpg");
   background-size: cover;
+  box-shadow: 3px 3px 3px rgba(128, 128, 128, 0.503);
 }
 h1 {
   text-align: center;
@@ -92,6 +93,7 @@ footer {
   background-size: cover;
   background-position-y: 12px;
   background-position-x: -542px;
+  box-shadow: 3px 3px 3px rgba(128, 128, 128, 0.503);
 }
 footer p {
   background-color: rgba(120, 27, 207, 0.425);
@@ -105,6 +107,6 @@ footer a {
   color: rgb(132, 1, 71);
   transition: all ease-in-out 500ms;
 }
-footer a:hover{
-    color: rgb(202, 21, 117);
+footer a:hover {
+  color: rgb(202, 21, 117);
 }
