@@ -3,62 +3,102 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Smythe&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="src/style.css" />
-    <title>🤖AI baby name generator🤖</title>
+    <title>🤖AI-powered baby name generator🤖</title>
   </head>
   <body>
-    <header>
-      <h1>Welcome to the AI baby name generator</h1>
-      <form>
-        <div>
-          <label for="culture">Cultural preference </label>
+    <div class="container">
+      <header>
+        <h1>Find Baby Names with AI</h1>
+        <form>
+          <div class="user-input-container">
+            <div class="radio-buttons-wrapper">
+              <div>
+                <fieldset>
+                  <legend>Select a gender:</legend>
+                  <div>
+                    <input
+                      type="radio"
+                      id="boy"
+                      name="gender"
+                      value="boy"
+                      class="radio-button"
+                    />
+                    <label for="boy">Boy</label>
+                  </div>
+
+                  <div>
+                    <input
+                      type="radio"
+                      id="girl"
+                      name="gender"
+                      value="girl"
+                      class="radio-button"
+                    />
+                    <label for="girl">Girl</label>
+                  </div>
+
+                  <div>
+                    <input
+                      type="radio"
+                      id="gender-neutral"
+                      name="gender"
+                      value="gender-neutral"
+                      class="radio-button"
+                    />
+                    <label for="gender-neutral">Gender-neutral</label>
+                  </div>
+                </fieldset>
+              </div>
+            </div>
+            <div>
+              <div class="culture-wrapper">
+                <label for="culture">Cultural preference </label>
+                <br />
+                <input
+                  type="text"
+                  id="culture"
+                  placeholder="e.g. Spanish"
+                  class="culture"
+                />
+              </div>
+              <div class="length-wrapper">
+                <label for="length">Length (optional)</label>
+                <br />
+                <input
+                  type="text"
+                  placeholder="Enter a value between 1-10"
+                  id="length"
+                  class="length"
+                />
+              </div>
+            </div>
+          </div>
+          <input type="submit" value="Submit" class="submit-button" />
+        </form>
+      </header>
+
+      <main>
+        <p>
+          A trendy name for a girl is Luna(LOO-nah)
           <br />
-          <input type="text" id="culture" placeholder="e.g. Spanish " />
-        </div>
-        <div>
-          <label for="length">Length preference(optional)</label>
-          <br />
-          <input
-            type="number"
-            max="10"
-            min="0"
-            placeholder="Upto 10"
-            id="length"
-          />
-        </div>
-        <fieldset>
-          <legend>Select a gender:</legend>
-          <div>
-            <input type="radio" id="boy" name="gender" value="boy" />
-            <label for="boy">Boy</label>
-          </div>
-
-          <div>
-            <input type="radio" id="girl" name="gender" value="girl" />
-            <label for="girl">Girl</label>
-          </div>
-
-          <div>
-            <input
-              type="radio"
-              id="gender-neutral"
-              name="gender"
-              value="gender-neutral"
-            />
-            <label for="gender-neutral">Gender-neutral</label>
-          </div>
-        </fieldset>
-        <input type="submit" value="Submit">
-      </form>
-    </header>
-
-    <main>
-        <p>A trendy name for a girl is Luna(LOO-nah)</p>
-        <p>Luna is of Latin origin, meaning "moon," symbolizing light, beauty, and mystery.</p>
-    </main>
-
+          Luna is of Latin origin, meaning "moon," symbolizing light, beauty,
+          and mystery.
+        </p>
+      </main>
+    </div>
     <footer>
-      This AI project was coded by
+      <p>This AI project was designed and coded by
       <a href="https://github.com/Sai-S-Mc" target="_blank">Sai Satti</a>, is
       open-sourced on
       <a href="https://github.com/Sai-S-Mc/baby-name-generator" target="_blank"
@@ -67,7 +107,7 @@
       and hosted on
       <a href="https://name-generator-by-sai.netlify.app/" target="_blank"
         >Netlify</a
-      >
+      ></p>
     </footer>
     <script src="src/index.js"></script>
   </body>
