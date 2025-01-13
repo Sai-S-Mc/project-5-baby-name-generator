@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🤖AI-powered baby name generator🤖</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -13,17 +14,16 @@
       href="https://fonts.googleapis.com/css2?family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="src/style.css" />
-    <title>🤖AI-powered baby name generator🤖</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=favorite" />    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+<link rel="stylesheet" href="src/style.css">
   </head>
   <body>
     <div class="container">
       <header>
         <h1>Find Baby Names with AI</h1>
-        <form>
+        <form id="name-generator-form">
           <div class="user-input-container">
             <div class="radio-buttons-wrapper">
-              <div>
                 <fieldset>
                   <legend>Select a gender:</legend>
                   <div>
@@ -33,6 +33,7 @@
                       name="gender"
                       value="boy"
                       class="radio-button"
+                      required
                     />
                     <label for="boy">Boy</label>
                   </div>
@@ -59,11 +60,10 @@
                     <label for="gender-neutral">Gender-neutral</label>
                   </div>
                 </fieldset>
-              </div>
             </div>
             <div>
               <div class="culture-wrapper">
-                <label for="culture">Cultural preference </label>
+                <label for="culture">Cultural preference (optional)</label>
                 <br />
                 <input
                   type="text"
@@ -89,12 +89,9 @@
       </header>
 
       <main>
-        <p>
-          A trendy name for a girl is Luna(LOO-nah)
-          <br />
-          Luna is of Latin origin, meaning "moon," symbolizing light, beauty,
-          and mystery.
+        <p id="name">
         </p>
+        <small>AI can make mistakes, please verify important information.</small>
       </main>
     </div>
     <footer>
