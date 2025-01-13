@@ -88,10 +88,10 @@ main p {
   font-size:16px;
   color: rgb(119 27 207 / 63%);
 }
-main small {
+.container small {
   display: block;
   text-align: center;
-  opacity:0.5;
+  opacity:0.6;
 }
 footer {
   text-align: center;
