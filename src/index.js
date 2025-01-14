@@ -1,6 +1,5 @@
 function handleApiCall(response) {
-  console.log("API response received");
-  new Typewriter("#name", {
+  new Typewriter("#apiResponse", {
     strings: response.data.answer,
     autoStart: true,
     delay: 45,
@@ -38,16 +37,11 @@ function handleFormSubmit(event) {
   let prompt = `Please generate a ${genderSelection} name along with it's pronunciation right after${cultureInput}${lengthInput} and it's meaning in a short sentence.`;
   let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
 
-  console.log(prompt);
-  console.log(context);
-  console.log("making an API call");
-
+  let apiResponseElement = document.querySelector("#apiResponse");
+  apiResponseElement.classList.remove("hidden");
+  apiResponseElement.innerHTML = `<span class="generating">⏳Working my magic... Generating a name⏳</span>`;
   axios.get(apiUrl).then(handleApiCall);
 }
 
 let formElement = document.querySelector("#name-generator-form");
 formElement.addEventListener("submit", handleFormSubmit);
-
-// let testString = "hello how are you"
-// testString = testString.autocapitalize();
-// console.log(testString);
