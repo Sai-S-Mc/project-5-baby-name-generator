@@ -9,7 +9,7 @@ body {
   padding: 10px;
   border-radius: 10px;
   background-image: url("../media/baby-feet.jpg");
-  background-size: cover;
+  background-size: 100%;
   box-shadow: 3px 3px 3px rgba(128, 128, 128, 0.503);
 }
 h1 {
@@ -76,22 +76,17 @@ main {
   background-color: rgba(135, 207, 235, 0.645);
   border-radius: 10px;
   margin: 10px auto;
-  padding: 10px;
+  padding: 20px 10px;
 }
-main p {
+main div {
   text-align: center;
   font-size: 19px;
 }
-.heart-cursor {
-  position:relative;
-  bottom: -3px;
-  font-size:16px;
-  color: rgb(119 27 207 / 63%);
-}
+
 .container small {
   display: block;
   text-align: center;
-  opacity:0.6;
+  opacity:0.65;
 }
 footer {
   text-align: center;
