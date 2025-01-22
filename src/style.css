@@ -57,7 +57,6 @@ fieldset {
 .submit-button {
   display: block;
   margin: 20px auto 10px;
-  width: 20%;
   padding: 10px 15px;
   border: none;
   border-radius: 8px;
@@ -134,5 +133,21 @@ footer a:hover {
 @keyframes blink-animation {
   to {
     visibility: hidden;
+  }
+}
+
+@media (max-width :500px){
+  h1 {
+    font-size: 30px;
+  }
+  .user-input-container{
+    flex-direction: column;
+    text-align: center;
+  }
+
+  @media (max-width : 300px){
+    .culture, .length {
+      width :150px;
+    }
   }
 }
