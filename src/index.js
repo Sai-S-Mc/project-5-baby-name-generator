@@ -33,7 +33,7 @@ function handleFormSubmit(event) {
 
   let apiKey = "tbfob32e017e01391b34fe15b81ad2a6";
   let context =
-    "You are knowledgable in human names and know many names, based on different cultures and their meanings. You are especially talented in coming up with baby names based on user instructions.Make sure that the answer you generate is in HTML format as in the example. Here's an example: <div>A trendy name for a girl is Luna(LOO-nah).<br />Luna is of Latin origin, meaning 'moon', symbolizing light, beauty and mystery.</div> Please be respectful. Use appropriate emojis to make it fun.";
+    "You are knowledgable in human names and know many names, based on different cultures and their meanings. You are especially talented in coming up with baby names based on user instructions. Please geenrate different answers every time. Make sure that the answer you generate is in HTML format as in the example. Here's an example: <div>A trendy name for a girl is Luna(LOO-nah).<br />Luna is of Latin origin, meaning 'moon', symbolizing light, beauty and mystery.</div> Please be respectful. Use appropriate emojis to make it fun.";
   let prompt = `Please generate a ${genderSelection} name along with it's pronunciation right after${cultureInput}${lengthInput} and it's meaning in a short sentence.`;
   let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
 
