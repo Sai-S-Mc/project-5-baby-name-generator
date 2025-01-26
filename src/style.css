@@ -48,7 +48,7 @@ fieldset {
   border: none;
   background-color: rgb(211, 243, 253);
   color: rgb(120, 27, 207);
-  width:200px
+  width: 200px;
 }
 .culture:focus,
 .length:focus {
@@ -77,13 +77,13 @@ main {
   margin: 10px auto;
   padding: 20px 10px 10px;
 }
-.hidden{
+.hidden {
   display: none;
 }
-span.generating{
+span.generating {
   display: block;
   text-align: center;
-  opacity:0.9;
+  opacity: 0.9;
   font-size: 19px;
   padding-bottom: 10px;
 }
@@ -96,8 +96,8 @@ main div {
   margin: 8px auto 0;
   text-align: center;
   background-color: rgba(224, 222, 225, 0.903);
+  color: rgba(0, 0, 0, 0.912);
   border-radius: 4px;
-  
 }
 footer {
   text-align: center;
@@ -113,11 +113,25 @@ footer {
   box-shadow: 3px 3px 3px rgba(128, 128, 128, 0.503);
 }
 footer p {
-  background-color: rgba(181, 114, 244, 0.907);
+  background-color: rgba(181, 114, 244, 0.922);
   border-radius: 10px;
   padding: 10px 5px;
   margin: 0;
   font-size: 17px;
+  position: relative;
+  overflow: hidden;
+}
+footer p::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("/media/glass-texture.jpg");
+  background-size: cover;
+  opacity: 0.2;
 }
 footer a {
   font-weight: bold;
@@ -136,18 +150,19 @@ footer a:hover {
   }
 }
 
-@media (max-width :500px){
+@media (max-width: 500px) {
   h1 {
     font-size: 30px;
   }
-  .user-input-container{
+  .user-input-container {
     flex-direction: column;
     text-align: center;
   }
 
-  @media (max-width : 300px){
-    .culture, .length {
-      width :150px;
+  @media (max-width: 300px) {
+    .culture,
+    .length {
+      width: 150px;
     }
   }
 }
