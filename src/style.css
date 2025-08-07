@@ -71,7 +71,7 @@ fieldset {
   background: white;
   cursor: pointer;
 }
-main {
+section {
   background-color: rgba(135, 207, 235, 0.877);
   border-radius: 10px;
   margin: 10px auto;
@@ -87,7 +87,7 @@ span.generating {
   font-size: 19px;
   padding-bottom: 10px;
 }
-main div {
+section div {
   text-align: center;
   font-size: 19px;
 }
