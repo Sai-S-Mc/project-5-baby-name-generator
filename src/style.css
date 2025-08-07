@@ -1,30 +1,44 @@
+:root {
+  --border-radius: 10px;
+  --primary-color: rgb(119 27 207 / 63%);
+  --color-text: rgb(120, 27, 207);
+  --box-shadow: 3px 3px 3px rgba(128, 128, 128, 0.503);
+}
 body {
   font-family: "Zain", serif;
   background-image: url("../media/baby-name-background.jpg");
   background-size: cover;
 }
-.container {
+.container,
+form {
+  border-radius: var(--border-radius);
+}
+.container,
+footer {
   max-width: 700px;
+}
+.container {
   margin: 120px auto 30px;
   padding: 10px 15px;
-  border-radius: 10px;
   background-image: url("../media/baby-feet.jpg");
-  background-size: 100%;
-  box-shadow: 3px 3px 3px rgba(128, 128, 128, 0.503);
+  background-size: contain;
+  box-shadow: var(--box-shadow);
+}
+h1,
+footer {
+  text-align: center;
 }
 h1 {
-  text-align: center;
   font-family: "Smythe", serif;
 }
 form {
   background-color: rgba(226, 157, 253, 0.904);
-  border-radius: 10px;
   padding: 10px 0;
 }
 .user-input-container {
-  padding: 10px;
   display: flex;
   justify-content: space-around;
+  padding: 10px;
   font-size: 19px;
 }
 .radio-buttons-wrapper {
@@ -32,11 +46,9 @@ form {
 }
 fieldset {
   border: none;
-  position: relative;
-  right: -5px;
 }
 .radio-button {
-  accent-color: rgb(119 27 207 / 63%);
+  accent-color: var(--primary-color);
 }
 .culture-wrapper {
   padding-bottom: 10px;
@@ -44,36 +56,36 @@ fieldset {
 .culture,
 .length {
   padding: 8px 15px;
-  border-radius: 5px;
+  border-radius: calc(var(--border-radius) - 5px);
   border: none;
   background-color: rgb(211, 243, 253);
-  color: rgb(120, 27, 207);
+  color: var(--color-text);
   width: 200px;
 }
 .culture:focus,
 .length:focus {
-  outline: 2px solid rgb(119 27 207 / 63%);
+  outline: 2px solid var(--primary-color);
 }
 .submit-button {
   display: block;
   margin: 20px auto 10px;
   padding: 10px 15px;
   border: none;
-  border-radius: 8px;
-  background-color: rgb(119 27 207 / 63%);
+  border-radius: calc(var(--border-radius) - 2px);
+  background-color: var(--primary-color);
   color: white;
-  box-shadow: 3px 3px 3px rgba(128, 128, 128, 0.503);
+  box-shadow: var(--box-shadow);
   transition: all ease-in-out 600ms;
 }
 .submit-button:hover {
-  color: rgb(120, 27, 207);
-  outline: 2px solid rgb(119 27 207 / 63%);
+  color: var(--color-text);
+  outline: 2px solid var(--primary-color);
   background: white;
   cursor: pointer;
 }
 section {
   background-color: rgba(135, 207, 235, 0.877);
-  border-radius: 10px;
+  border-radius: var(--border-radius);
   margin: 10px auto;
   padding: 20px 10px 10px;
 }
