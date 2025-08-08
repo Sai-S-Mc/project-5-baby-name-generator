@@ -3,8 +3,7 @@
   --primary-color: rgb(119 27 207 / 63%);
   --color-text: rgb(120, 27, 207);
   --box-shadow: 3px 3px 3px rgba(128, 128, 128, 0.503);
-  --transition : all ease-in-out 600ms;
-
+  --transition: all ease-in-out 600ms;
 }
 body {
   font-family: "Zain", serif;
@@ -40,20 +39,26 @@ form {
 .user-input-container {
   display: flex;
   justify-content: space-around;
+  align-items: center;
   padding: 10px;
   font-size: 19px;
+}
+fieldset {
+  border: 1px solid pink;
+  border-radius: var(--border-radius);
+  padding: 30px 15px;
+}
+fieldset legend, .input-wrapper, input {
+  text-align: center;
 }
 .radio-buttons-wrapper {
   margin-top: 10px;
 }
-fieldset {
-  border: none;
+.radio-buttons-wrapper div, .input-wrapper label {
+  line-height: 1.5;
 }
 .radio-button {
   accent-color: var(--primary-color);
-}
-.culture-wrapper {
-  padding-bottom: 10px;
 }
 .culture,
 .length {
