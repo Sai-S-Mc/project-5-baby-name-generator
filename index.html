@@ -63,26 +63,30 @@
               </fieldset>
             </div>
             <div>
-              <div class="culture-wrapper">
-                <label for="culture">Cultural preference (optional)</label>
+              <fieldset>
+                <legend>Optional inputs</legend>
+                <div class="input-wrapper">
+                  <label for="culture">Cultural preference</label>
+                  <br />
+                  <input
+                    type="text"
+                    id="culture"
+                    placeholder="e.g. Scottish, Kenyan or Indian"
+                    class="culture"
+                  />
+                </div>
                 <br />
-                <input
-                  type="text"
-                  id="culture"
-                  placeholder="e.g. Scottish, Kenyan or Indian"
-                  class="culture"
-                />
-              </div>
-              <div class="length-wrapper">
-                <label for="length">Length (optional)</label>
-                <br />
-                <input
-                  type="text"
-                  placeholder="Enter a value between 1 and 10"
-                  id="length"
-                  class="length"
-                />
-              </div>
+                <div class="input-wrapper">
+                  <label for="length">Length</label>
+                  <br />
+                  <input
+                    type="text"
+                    placeholder="Enter a value between 1 and 10"
+                    id="length"
+                    class="length"
+                  />
+                </div>
+              </fieldset>
             </div>
           </div>
           <input type="submit" value="Submit" class="submit-button" />
