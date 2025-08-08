@@ -25,6 +25,9 @@ footer {
   background-size: contain;
   box-shadow: var(--box-shadow);
 }
+form, section, footer p{
+  padding:20px;
+}
 h1,
 footer {
   text-align: center;
@@ -34,11 +37,10 @@ h1 {
 }
 form {
   background-color: rgba(226, 157, 253, 0.904);
-  padding: 10px 0;
 }
 .user-input-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   padding: 10px;
   font-size: 19px;
@@ -72,13 +74,19 @@ input:-webkit-autofill:active  {
   padding: 8px 15px;
   border-radius: calc(var(--border-radius) - 5px);
   border: none;
-  background-color: rgb(211, 243, 253);
   color: var(--color-text);
   width: 200px;
+  font-weight: 600;
 }
 .culture:focus,
 .length:focus {
   outline: 2px solid var(--primary-color);
+}
+.culture::placeholder,
+.length::placeholder{
+  color:var(--color-text);
+  opacity: 0.4;
+  font-weight: normal;
 }
 .submit-button {
   display: block;
@@ -101,7 +109,6 @@ section {
   background-color: rgba(135, 207, 235, 0.877);
   border-radius: var(--border-radius);
   margin: 10px auto;
-  padding: 20px 10px 10px;
 }
 .hidden {
   display: none;
@@ -126,6 +133,7 @@ span.generating {
 }
 small {
   margin: 8px auto 0;
+  padding: 5px;
   background-color: rgba(224, 222, 225, 0.903);
   border-radius: calc(var(--border-radius) - 5px);
 }
@@ -142,7 +150,6 @@ footer {
 footer p {
   background-color: rgba(181, 114, 244, 0.922);
   border-radius: var(--border-radius);
-  padding: 10px 5px;
   margin: 0;
   font-size: 17px;
 }
