@@ -7,7 +7,9 @@
 }
 body {
   font-family: "Zain", serif;
-  background-image: url("../media/baby-name-background.jpg");
+  /* background: linear-gradient(rgb(0, 0, 0, 0.4),rgb(0, 0, 0, 0.2), rgb(0, 0, 0, 0.4)),url("../media/bg-img.jpg"); */
+  background: linear-gradient(rgb(255, 255, 255, 0.3), rgb(255, 255, 255, 0.3)),
+    url("../media/bg-img.jpg");
   background-size: cover;
 }
 .container,
@@ -22,7 +24,7 @@ footer {
 }
 .container {
   margin: 120px auto 30px;
-  background-image: url("../media/baby-feet.jpg");
+  background-image: url("../media/main-bg-img.jpg");
   background-size: contain;
   box-shadow: var(--box-shadow);
 }
@@ -39,7 +41,11 @@ h1 {
   font-family: "Smythe", serif;
 }
 form {
-  background-color: rgba(226, 157, 253, 0.904);
+  background: linear-gradient(
+    rgba(250, 146, 197, 0.75),
+    rgba(250, 146, 197),
+    rgba(250, 146, 197, 0.75)
+  );
 }
 .user-input-container {
   display: flex;
@@ -112,7 +118,11 @@ input:-webkit-autofill:active {
   cursor: pointer;
 }
 section {
-  background-color: rgba(135, 207, 235, 0.877);
+  background: linear-gradient(
+    rgba(135, 207, 235, 0.75),
+    rgba(135, 207, 235),
+    rgba(135, 207, 235, 0.75)
+  );
   border-radius: var(--border-radius);
   margin: 10px auto;
 }
@@ -141,20 +151,29 @@ span.generating {
 small {
   margin: 8px auto 0;
   padding: 5px;
-  background-color: rgba(224, 222, 225, 0.903);
+  /* background-color: rgba(231, 202, 246, 0.903); */
+  background: linear-gradient(
+    rgb(189, 254, 214, 0.75),
+    rgb(189, 254, 214),
+    rgb(189, 254, 214, 0.75)
+  );
   border-radius: calc(var(--border-radius) - 5px);
 }
 footer {
   display: block;
   margin: 0 auto 50px;
   border-radius: var(--border-radius);
-  background: url("../media/hearts.jpg");
+  background: url("../media/footer-bg-img.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   box-shadow: var(--box-shadow);
 }
 footer p {
-  background-color: rgba(181, 114, 244, 0.922);
+  background: linear-gradient(
+    rgba(201, 142, 255, 0.75),
+    rgba(201, 142, 255),
+    rgba(201, 142, 255, 0.75)
+  );
   border-radius: var(--border-radius);
   margin: 0;
 }
