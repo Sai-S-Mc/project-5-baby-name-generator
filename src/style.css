@@ -17,16 +17,19 @@ form {
 .container,
 footer {
   max-width: 700px;
+  width: 85%;
+  padding: 15px;
 }
 .container {
   margin: 120px auto 30px;
-  padding: 10px 15px;
   background-image: url("../media/baby-feet.jpg");
   background-size: contain;
   box-shadow: var(--box-shadow);
 }
-form, section, footer p{
-  padding:20px;
+form,
+section,
+footer p {
+  padding: 20px;
 }
 h1,
 footer {
@@ -42,7 +45,7 @@ form {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
+  padding: 20px 30px;
   font-size: 19px;
 }
 fieldset {
@@ -50,20 +53,23 @@ fieldset {
   border-radius: var(--border-radius);
   padding: 30px 15px;
 }
-fieldset legend, .input-wrapper, input {
+fieldset legend,
+.input-wrapper,
+input {
   text-align: center;
 }
 input:-webkit-autofill,
-input:-webkit-autofill:hover, 
-input:-webkit-autofill:focus, 
-input:-webkit-autofill:active  {
--webkit-box-shadow: 0 0 0 30px white inset !important;
--webkit-text-fill-color: var(--primary-color);
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+  -webkit-text-fill-color: var(--primary-color);
 }
 .radio-buttons-wrapper {
   margin-top: 10px;
 }
-.radio-buttons-wrapper div, .input-wrapper label {
+.radio-buttons-wrapper div,
+.input-wrapper label {
   line-height: 1.5;
 }
 .radio-button {
@@ -83,8 +89,8 @@ input:-webkit-autofill:active  {
   outline: 2px solid var(--primary-color);
 }
 .culture::placeholder,
-.length::placeholder{
-  color:var(--color-text);
+.length::placeholder {
+  color: var(--color-text);
   opacity: 0.4;
   font-weight: normal;
 }
@@ -114,7 +120,8 @@ section {
   display: none;
 }
 span.generating,
-section div {
+section div,
+footer p {
   font-size: 19px;
 }
 span.generating,
@@ -140,7 +147,6 @@ small {
 footer {
   display: block;
   margin: 0 auto 50px;
-  padding: 15px 10px;
   border-radius: var(--border-radius);
   background: url("../media/hearts.jpg");
   background-size: cover;
@@ -151,7 +157,6 @@ footer p {
   background-color: rgba(181, 114, 244, 0.922);
   border-radius: var(--border-radius);
   margin: 0;
-  font-size: 17px;
 }
 footer a {
   font-weight: bold;
