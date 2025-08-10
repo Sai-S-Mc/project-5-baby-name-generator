@@ -2,12 +2,13 @@
   --border-radius: 10px;
   --primary-color: rgb(119 27 207 / 63%);
   --color-text: rgb(120, 27, 207);
-  --box-shadow: 3px 3px 3px rgba(128, 128, 128, 0.503);
+  --box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
+    rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
+    rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
   --transition: all ease-in-out 600ms;
 }
 body {
   font-family: "Zain", serif;
-  /* background: linear-gradient(rgb(0, 0, 0, 0.4),rgb(0, 0, 0, 0.2), rgb(0, 0, 0, 0.4)),url("../media/bg-img.jpg"); */
   background: linear-gradient(rgb(255, 255, 255, 0.3), rgb(255, 255, 255, 0.3)),
     url("../media/bg-img.jpg");
   background-size: cover;
