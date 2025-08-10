@@ -1,10 +1,30 @@
 function handleApiCall(response) {
+  console.log(response.data)
+
   new Typewriter("#apiResponse", {
     strings: response.data.answer,
     autoStart: true,
     delay: 45,
     cursor: null,
   });
+}
+
+function formatOptionalInputs(culture, length) {
+  let culturePhrase = `of ${culture} culture`;
+  let lengthPhrase = `${length} characters long`;
+  let message = `The name should be`;
+  if (culture || length) {
+    if (culture && length) {
+      message = `${message} ${culturePhrase} and ${lengthPhrase}.`;
+    } else if (culture) {
+      message = `${message} ${culturePhrase}.`;
+    } else if (length) {
+      message = `${message} ${lengthPhrase}.`;
+    }
+  } else {
+    message = "";
+  }
+  return message;
 }
 
 function handleFormSubmit(event) {
@@ -17,22 +37,20 @@ function handleFormSubmit(event) {
   let cultureInputElement = document.querySelector("#culture");
   let cultureInput = cultureInputElement.value;
   if (cultureInput) {
-    cultureInput = `, based on ${cultureInput} culture`;
-  } else {
-    cultureInput = "";
+    cultureInput = cultureInput.trim();
   }
 
   let lengthInputElement = document.querySelector("#length");
   let lengthInput = lengthInputElement.value;
   if (lengthInput) {
-    lengthInput = ` that is exactly ${lengthInput} characters long.`;
-  } else {
-    lengthInput = "";
+    lengthInput = lengthInput.trim();
   }
+
+  let optionalPreference = formatOptionalInputs(cultureInput, lengthInput);
 
   let apiKey = "tbfob32e017e01391b34fe15b81ad2a6";
   let context = `You are knowledgable in human names and know many names, based on different cultures and their meanings. You are especially talented in coming up with baby names based on user instructions. Please generate different answers every time. Make sure that the answer you generate is in HTML format as in the example. Here's an example: <div>A trendy name for a girl is Luna(LOO-nah).<br />Luna is of Latin origin, meaning 'moon', symbolizing light, beauty and mystery.</div> Make sure to obey the ${lengthInput} requirement when it comes to the name not its pronunciation, if you cannot find a name that can obey the ${lengthInput}, include a short but playful apology and explanation before the rest of the answer in HTML format.For example, <div>I searched the solar system for a ${genderSelection} name that is exactly ${lengthInput} long but I couldn't find any. Here's a name that I think you might like. I counted it and I think it is [specify the character length] characters long (I am sometimes bad at Math).<br/><br/></div>Use appropriate emojis to make it fun.`;
-  let prompt = `Please generate a ${genderSelection} name along with it's pronunciation and it's meaning in a short sentence.`;
+  let prompt = `Please generate a ${genderSelection} name along with it's pronunciation and it's meaning in a short sentence.${optionalPreference}`;
   let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
 
   let apiResponseElement = document.querySelector("#apiResponse");
