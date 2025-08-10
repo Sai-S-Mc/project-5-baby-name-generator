@@ -4,7 +4,7 @@ function handleApiCall(response) {
   new Typewriter("#apiResponse", {
     strings: response.data.answer,
     autoStart: true,
-    delay: 45,
+    delay: 25,
     cursor: null,
   });
 }

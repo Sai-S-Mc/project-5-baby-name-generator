@@ -245,10 +245,16 @@ footer a:hover {
     background-size: cover;
   }
 
-  @media (max-width: 300px) {
+  @media (max-width: 360px) {
+    .user-input-container{
+      padding:30px 0;
+    }
+   fieldset {
+      padding: 30px 5px;
+    }
     .culture,
     .length {
-      width: 150px;
+      width: 80%;
     }
   }
 }
