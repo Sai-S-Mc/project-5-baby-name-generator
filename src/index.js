@@ -9,12 +9,14 @@ function handleApiCall(response) {
 
 function handleFormSubmit(event) {
   event.preventDefault();
-  let radioSelection = document.querySelector("input[name='gender']:checked");
-  let genderSelection = radioSelection.value;
+  let genderSelectionElement = document.querySelector(
+    "input[name='gender']:checked"
+  );
+  let genderSelection = genderSelectionElement.value;
 
   let cultureInputElement = document.querySelector("#culture");
   let cultureInput = cultureInputElement.value;
-  if (cultureInput.length > 0) {
+  if (cultureInput) {
     cultureInput = `, based on ${cultureInput} culture`;
   } else {
     cultureInput = "";
@@ -22,19 +24,15 @@ function handleFormSubmit(event) {
 
   let lengthInputElement = document.querySelector("#length");
   let lengthInput = lengthInputElement.value;
-  if (lengthInput > 0 && lengthInput <= 10) {
-    lengthInput = ` that is exactly ${lengthInput} characters long(NOT including whitespace)`;
-  } else if (lengthInput > 10) {
-    lengthInput = 10;
-    lengthInput = ` that is exactly ${lengthInput} characters long(NOT including whitespace)`;
+  if (lengthInput) {
+    lengthInput = ` that is exactly ${lengthInput} characters long.`;
   } else {
     lengthInput = "";
   }
 
   let apiKey = "tbfob32e017e01391b34fe15b81ad2a6";
-  let context =
-    "You are knowledgable in human names and know many names, based on different cultures and their meanings. You are especially talented in coming up with baby names based on user instructions. Please geenrate different answers every time. Make sure that the answer you generate is in HTML format as in the example. Here's an example: <div>A trendy name for a girl is Luna(LOO-nah).<br />Luna is of Latin origin, meaning 'moon', symbolizing light, beauty and mystery.</div> Please be respectful. Use appropriate emojis to make it fun.";
-  let prompt = `Please generate a ${genderSelection} name along with it's pronunciation right after${cultureInput}${lengthInput} and it's meaning in a short sentence.`;
+  let context = `You are knowledgable in human names and know many names, based on different cultures and their meanings. You are especially talented in coming up with baby names based on user instructions. Please generate different answers every time. Make sure that the answer you generate is in HTML format as in the example. Here's an example: <div>A trendy name for a girl is Luna(LOO-nah).<br />Luna is of Latin origin, meaning 'moon', symbolizing light, beauty and mystery.</div> Make sure to obey the ${lengthInput} requirement when it comes to the name not its pronunciation, if you cannot find a name that can obey the ${lengthInput}, include a short but playful apology and explanation before the rest of the answer in HTML format.For example, <div>I searched the solar system for a ${genderSelection} name that is exactly ${lengthInput} long but I couldn't find any. Here's a name that I think you might like. I counted it and I think it is [specify the character length] characters long (I am sometimes bad at Math).<br/><br/></div>Use appropriate emojis to make it fun.`;
+  let prompt = `Please generate a ${genderSelection} name along with it's pronunciation and it's meaning in a short sentence.`;
   let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
 
   let apiResponseElement = document.querySelector("#apiResponse");
