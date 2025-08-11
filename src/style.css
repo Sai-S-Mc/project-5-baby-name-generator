@@ -14,7 +14,8 @@ body {
   background-size: cover;
 }
 .container,
-form {
+form,
+h1 {
   border-radius: var(--border-radius);
 }
 .container,
@@ -23,18 +24,21 @@ footer {
   width: 85%;
   padding: 15px;
 }
+.container,
+h1 {
+  box-shadow: var(--box-shadow);
+}
 .container {
   margin: 120px auto 30px;
   background-image: url("../media/main-bg-img.jpg");
   background-size: contain;
-  box-shadow: var(--box-shadow);
-}
-h1,
-footer {
-  text-align: center;
 }
 h1 {
   font-family: "Smythe", serif;
+  width: fit-content;
+  padding: 10px;
+  background-color: white;
+  margin: 22px auto;
 }
 form {
   background: linear-gradient(
@@ -246,10 +250,10 @@ footer a:hover {
   }
 
   @media (max-width: 360px) {
-    .user-input-container{
-      padding:30px 0;
+    .user-input-container {
+      padding: 30px 0;
     }
-   fieldset {
+    fieldset {
       padding: 30px 5px;
     }
     .culture,
