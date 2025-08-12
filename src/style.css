@@ -25,7 +25,11 @@ footer {
   padding: 15px;
 }
 .container,
-h1, form, section, small,footer p{
+h1,
+form,
+section,
+small,
+footer p {
   box-shadow: var(--box-shadow);
 }
 .container {
@@ -43,7 +47,9 @@ h1 {
 form {
   background: linear-gradient(
     rgba(250, 146, 197, 0.75),
-    rgba(250, 146, 197),
+    15%,
+    rgba(250, 146, 197) 30%,
+    90%,
     rgba(250, 146, 197, 0.75)
   );
   padding: 20px;
@@ -118,7 +124,9 @@ input:-webkit-autofill:active {
 section {
   background: linear-gradient(
     rgba(135, 207, 235, 0.75),
-    rgba(135, 207, 235),
+    15%,
+    rgba(135, 207, 235) 30%,
+    90%,
     rgba(135, 207, 235, 0.75)
   );
   border-radius: var(--border-radius);
@@ -160,7 +168,9 @@ small {
   font-size: 14.5px;
   background: linear-gradient(
     rgb(189, 254, 214, 0.75),
-    rgb(189, 254, 214),
+    15%,
+    rgb(189, 254, 214) 30%,
+    90%,
     rgb(189, 254, 214, 0.75)
   );
 }
@@ -175,7 +185,9 @@ footer {
 footer p {
   background: linear-gradient(
     rgba(201, 142, 255, 0.75),
-    rgba(201, 142, 255),
+    15%,
+    rgba(201, 142, 255) 30%,
+    90%,
     rgba(201, 142, 255, 0.75)
   );
   border-radius: var(--border-radius);
