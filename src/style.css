@@ -13,6 +13,9 @@ body {
     url("../media/bg-img.jpg");
   background-size: cover;
 }
+.hidden {
+  display: none;
+}
 .container,
 form,
 h1 {
@@ -133,30 +136,24 @@ section {
   margin: 20px auto 0px;
   display: flex;
   justify-content: center;
+  align-items: center;
   line-height: 1.4;
   padding: 60px 20px;
 }
-.hidden {
-  display: none;
-}
-span.generating,
-section div,
-footer p {
-  font-size: 19px;
-}
-span.generating,
-section div,
+section,
 small,
 footer {
   text-align: center;
 }
 span.generating,
+section,
+footer p {
+  font-size: 19px;
+}
+span.generating,
 small {
   display: block;
   opacity: 0.9;
-}
-span.generating {
-  padding-bottom: 10px;
 }
 small,
 footer {
