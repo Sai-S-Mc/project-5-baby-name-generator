@@ -1,3 +1,22 @@
+function handleError() {
+  let errorMessages = [
+    "Uh-oh! The stork got lost on the way with your baby name. Try again!",
+    "Oops! Our name crib is empty. Let's rattle it up and try once more!",
+    "Whoops! The baby name fairy fell asleep. Wake her up with another click!",
+    "Oh no! The naming playground is closed for recess. Try again in a sec!",
+    "Eek! The baby name blocks got knocked over. Let's rebuild and retry!",
+  ];
+
+  let randomIndex = Math.floor(Math.random() * errorMessages.length);
+  let errorMessage = errorMessages[randomIndex];
+
+  new Typewriter("#apiResponse", {
+    strings: errorMessage,
+    autoStart: true,
+    delay: 25,
+    cursor: null,
+  });
+}
 
 function handleApiCall(response) {
   new Typewriter("#apiResponse", {
