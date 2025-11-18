@@ -118,7 +118,8 @@ input:-webkit-autofill:active {
   box-shadow: var(--box-shadow);
   transition: var(--transition);
 }
-.submit-button:hover {
+.submit-button:hover,
+.submit-button:focus-visible {
   color: var(--color-text);
   outline: 2px solid var(--primary-color);
   background: white;
@@ -195,7 +196,8 @@ footer a {
   color: rgb(132, 1, 71);
   transition: var(--transition);
 }
-footer a:hover {
+footer a:hover,
+footer a:focus-visible {
   color: rgb(202, 21, 117);
 }
 .generating {
